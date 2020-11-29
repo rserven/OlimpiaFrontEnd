@@ -1,0 +1,16 @@
+
+<form (submit)="onSubmit()" [formGroup]="form">
+    <div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Id de Documento*</mat-label>
+        <input formControlName="documentid" type="number" matInput />
+        <mat-error>El campo Nombre es requerido</mat-error>
+      </mat-form-field>
+      </div>     
+      <div>
+          <button mat-flat-button color="primary" [disabled]="form.invalid">
+            Eliminar
+          </button>&nbsp;
+          <a mat-stroked-button routerLink="/"> Cancelar </a>
+        </div>
+  </form>

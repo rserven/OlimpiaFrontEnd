@@ -1,0 +1,35 @@
+
+<form (submit)="onSubmit()" [formGroup]="form">
+  <div>
+    <mat-form-field appearance="legacy">
+      <mat-label>Id de Documento*</mat-label>
+      <input formControlName="documentid" type="number" matInput />
+      <mat-error>El campo Nombre es requerido</mat-error>
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field appearance="legacy">
+      <mat-label>Nombre Completo*</mat-label>
+      <input formControlName="fullname" matInput />
+      <mat-error>El campo Nombre es requerido</mat-error>
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field appearance="legacy">
+      <mat-label>Puerta</mat-label>
+      <mat-select formControlName="location">        
+        <mat-option value="North">Norte</mat-option>
+        <mat-option value="South">Sur</mat-option>       
+        <mat-option value="East">Este</mat-option>
+        <mat-option value="West">Oeste</mat-option>
+      </mat-select>
+      <mat-error>El campo Nombre es requerido</mat-error>
+    </mat-form-field>
+    </div>
+    <div>
+        <button mat-flat-button color="primary" [disabled]="form.invalid">
+          Guardar Cambios
+        </button>&nbsp;
+        <a mat-stroked-button routerLink="/"> Cancelar </a>
+      </div>
+</form>
